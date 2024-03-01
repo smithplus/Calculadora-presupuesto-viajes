@@ -1,0 +1,236 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Columna de inputs */
+.inputs-column {
+  width: 50%; /* Cambiado al 50% para ocupar la mitad del ancho */
+  max-width: none; /* Elimina el límite máximo de ancho */
+  padding: 20px;
+  margin-right: 0; /* Elimina el margen derecho */
+  /* Espacio entre columnas */
+}
+
+/* Columna de resultados */
+.results-column {
+  width: 50%; /* Cambiado al 50% para ocupar la mitad del ancho */
+  max-width: none; /* Elimina el límite máximo de ancho */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.pre-results {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+  border-radius: 16px;
+  border: 1px solid #E6E6E6;
+  background: #FFF;
+}
+
+h2 {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+label {
+  color: #000000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 12px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilos para los botones o controles interactivos, si existen */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  display: block;
+  /* Hacer que los botones sean de bloque para ocupar el ancho completo */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los resultados */
+.resultado {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilos para íconos o etiquetas de resultado, si se utilizan */
+.icono {
+  margin-right: 5px;
+}
+
+/* Estilos para los porcentajes y montos en la sección de resultados */
+.porcentaje,
+.monto {
+  padding: 8px 12px;
+  align-items: left;
+  border-radius: 150px;
+  border: 1px solid #E3E3E3;
+  background: #FFF;
+  font-weight: bold;
+  color: #404040;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+.aporte {
+  font-weight: 600;
+}
+
+.result-item {
+  margin-top: 20px;
+}
+
+/* Ajustes responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .inputs-column,
+  .results-column {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  /* Otros ajustes responsivos si es necesario... */
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-item {
+  flex: 1;
+  /* Esto hace que cada input-item tenga el mismo ancho */
+  margin-right: 10px;
+  /* Esto añade un pequeño espacio entre los inputs */
+}
+
+.input-item:last-child {
+  margin-right: 0;
+  /* Esto asegura que el último input-item no tenga margen a la derecha */
+}
+
+/* Puedes necesitar ajustar el ancho de los inputs dentro de input-item si es demasiado grande */
+input[type="number"] {
+  width: calc(100% - 20px);
+  /* Restar el padding total de la tarjeta */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #F6F6F6;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* ... tus otros estilos ... */
+
+.input-row {
+  margin-bottom: 42px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* Esto añade espacio entre las tarjetas */
+}
+
+.card {
+  flex: 1;
+  border-radius: 16px;
+  border: 1px solid #E6E6E6;
+  background: #FFF;
+  padding: 20px;
+}
+
+/* Ajustes para que los inputs no se expandan más allá de las tarjetas */
+.card input[type="number"] {
+  width: calc(100%);
+  /* Restar el padding total de la tarjeta */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #F6F6F6;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .input-row {
+      flex-direction: column;
+  }
+
+  .card {
+      flex: none;
+      /* Para que no se estiren en dispositivos móviles */
+      width: 100%;
+      /* Ocupa toda la anchura disponible */
+      margin-bottom: 10px;
+  }
+}
+
+.result-card {
+  border-radius: 16px;
+  border: 1px solid #E6E6E6;
+  background: #EFF5FF;
+  padding: 20px;
+  margin-bottom: 21px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21px;
+  align-self: stretch;
+}
