@@ -1,26 +1,23 @@
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand",sans-serif;
   background-color: #f7f7f7;
   margin: 0;
-  padding: 20px;
-  /* Elimina el padding global para que el padding se maneje dentro de los contenedores específicos */
+  padding: 20px
 }
 
 .container {
   display: flex;
-  flex-direction: column; /* Cambia la dirección a columna para que sea consistente con el diseño móvil */
+  flex-direction: column;
   justify-content: center;
-  max-width: 424px; /* Establece el ancho máximo para desktop */
-  margin: 0 auto; /* Centra el contenedor en la página */
-  padding: 20px; /* Mantiene el padding que ya tenías */
+  max-width: 424px;
+  margin: 0 auto;
+  padding: 20px
 }
 
-/* Columna de inputs */
-/* Asegúrate de que tus columnas de inputs y resultados se ajusten al nuevo diseño */
-.inputs-column, .results-column {
-  width: 100%; /* Ocupará el ancho completo del contenedor .container */
-  max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
-  margin-right: 0; /* Asegura que no haya margen derecho innecesario */
+.inputs-column,.results-column {
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0
 }
 
 .pre-results {
@@ -31,305 +28,255 @@ body {
   gap: 12px;
   flex: 1 0 0;
   border-radius: 16px;
-  border: 1px solid #E6E6E6;
-  background: #FFF;
+  border: 1px solid #e6e6e6;
+  background: #fff
 }
 
-h2 {
+h2,label {
   color: #000;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 12px;
+  margin-bottom: 12px
 }
 
 label {
-  color: #000000;
   font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
   padding-bottom: 12px;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px
 }
 
-input[type="number"] {
+input[type=number] {
   width: 100%;
-  padding: 10px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  width: calc(100% - 20px);
+  padding: 10px;
   border: 1px solid #ccc;
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  background: #f6f6f6;
+  border-radius: 8px;
+  box-sizing: border-box
 }
 
-/* Chrome, Safari, Edge */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+  margin: 0
 }
 
-
-/* Estilos para los botones o controles interactivos, si existen */
 button {
   padding: 10px 20px;
-  border: none;
+  border: 0;
   border-radius: 4px;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   cursor: pointer;
   display: block;
-  /* Hacer que los botones sean de bloque para ocupar el ancho completo */
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3
 }
 
-/* Estilos para los resultados */
 .resultado {
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
   padding: 20px;
   margin-bottom: 20px;
-  color: #333;
+  color: #333
 }
 
-/* Estilos para íconos o etiquetas de resultado, si se utilizan */
 .icono {
-  margin-right: 5px;
+  margin-right: 5px
 }
 
-/* Estilos para los porcentajes y montos en la sección de resultados */
-.porcentaje,
-.monto {
+.monto,.porcentaje {
   padding: 8px 12px;
   align-items: left;
   border-radius: 150px;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #e3e3e3;
   background: #eceeff;
-  font-weight: bold;
   color: #4f55f0;
   font-size: 16px;
   font-weight: 700;
-  line-height: normal;
+  line-height: normal
 }
+
 .aporte {
-  font-weight: 600;
+  font-weight: 600
 }
 
 .result-item {
-  margin-top: 20px;
+  margin-top: 20px
 }
 
-/* Media query para pantallas más anchas que 424px */
-@media (min-width: 424px) {
+@media (min-width:424px) {
   body {
-    /* Opcional: si deseas aumentar el padding en los lados en pantallas más grandes */
-    padding: 20px;
+      padding: 20px
   }
 }
 
-/* Ajustes responsivos para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .container {
       flex-direction: column;
-      padding: 0;
+      padding: 0
   }
 
-  .inputs-column,
-  .results-column {
+  .inputs-column,.results-column {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 20px;
+      margin-bottom: 20px
   }
-
-  /* Otros ajustes responsivos si es necesario... */
 }
 
 .input-group {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .input-item {
   flex: 1;
-  /* Esto hace que cada input-item tenga el mismo ancho */
-  margin-right: 10px;
-  /* Esto añade un pequeño espacio entre los inputs */
+  margin-right: 10px
 }
 
 .input-item:last-child {
-  margin-right: 0;
-  /* Esto asegura que el último input-item no tenga margen a la derecha */
+  margin-right: 0
 }
-
-/* Puedes necesitar ajustar el ancho de los inputs dentro de input-item si es demasiado grande */
-input[type="number"] {
-  width: calc(100% - 20px);
-  /* Restar el padding total de la tarjeta */
-  padding: 10px;
-  border: 1px solid #ccc;
-  background: #F6F6F6;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-/* ... tus otros estilos ... */
 
 .input-row {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  /* Esto añade espacio entre las tarjetas */
+  gap: 10px
 }
 
 .card {
   flex: 1;
   border-radius: 16px;
-  border: 1px solid #E6E6E6;
-  background: #FFF;
-  padding: 20px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  padding: 20px
 }
 
-/* Ajustes para que los inputs no se expandan más allá de las tarjetas */
-.card input[type="number"] {
+.card input[type=number] {
   width: calc(100%);
-  /* Restar el padding total de la tarjeta */
   padding: 10px;
   border: 1px solid #ccc;
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 8px;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .input-row {
-      flex-direction: column;
+      flex-direction: column
   }
 
   .card {
       flex: none;
-      /* Para que no se estiren en dispositivos móviles */
-      
-      /* Ocupa toda la anchura disponible */
-      margin-bottom: 10px;
+      margin-bottom: 10px
   }
 }
 
 .result-card {
   border-radius: 16px;
-  border: 1px solid #E6E6E6;
-  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  background: #fff;
   padding: 20px;
   margin-bottom: 21px;
   flex-direction: column;
   align-items: flex-start;
   gap: 21px;
-  align-self: stretch;
+  align-self: stretch
+}
+
+.OpcionesAhorro,.icon-wrapper {
+  align-items: center;
+  border-radius: 8px
 }
 
 .icon-wrapper {
   color: #4f55f0;
   width: 20px;
   height: 20px;
-  display: inline-flex; /* Cambiado a inline-flex para usar flexbox */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  background-color: #eceeff; /* Color de fondo */
-  border-radius: 8px; /* Redondeo de esquinas */
-  padding: 5px; /* Espacio alrededor del icono */
-  margin-right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #eceeff;
+  padding: 5px;
+  margin-right: 8px
 }
 
-
 .OpcionesAhorro {
-  display: flex; /* Establece el contenedor como un Flex container */
-  align-items: center; /* Centra los elementos hijos verticalmente */
-  cursor: pointer; /* Hace que el cursor cambie a mano al pasar sobre el área */
+  display: flex;
+  cursor: pointer;
   background: #f7f7f7;
   padding: 20px;
-  margin: 20px 0; /* Ajustado para mantener el margen consistente */
-  border-radius: 8px;
-  border: 1px solid #E6E6E6;
+  margin: 20px 0;
+  border: 1px solid #e6e6e6
 }
 
 .OpcionesAhorro label {
-  display: flex;
-  align-items: center;
   cursor: pointer;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0
 }
 
-.OpcionesAhorro input[type="radio"] {
-  margin-right: 10px; /* Asegura un poco de espacio entre el radio y el texto */
+.OpcionesAhorro input[type=radio] {
+  margin-right: 10px
 }
 
 .OpcionesAhorroSeleccionado {
-  border: 1px solid #4f55f0; /* Nuevo color de borde */
-  background-color: #eceeff; /* Nuevo color de fondo */
-  color: #4f55f0; /* Nuevo color de texto */
+  border: 1px solid #4f55f0;
+  background-color: #eceeff;
+  color: #4f55f0
+}
+
+.OpcionesAhorro label,.gasto-info,.gasto-item {
+  display: flex;
+  align-items: center
 }
 
 .gasto-info {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
+  font-weight: 600
 }
 
 .gasto-item {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
-  background: white;
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e3e3e3
 }
 
 .emoji {
-  margin-right: 10px;
+  margin-right: 10px
 }
 
 .porcentaje {
-  margin-left: 10px; /* Ajusta según necesites */
+  margin-left: 10px
 }
-
-
-
 
 .result-header {
   display: flex;
-  justify-content: space-between; /* Alinea los elementos a los extremos */
-  align-items: center; /* Centra los elementos verticalmente */
-  width: 100%; /* Ocupa el ancho total del contenedor padre */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
 }
 
 .result-header label:first-child {
-  text-align: left; /* Asegura que el texto del primer span (plan) esté a la izquierda */
+  text-align: left
 }
 
 .result-header label:last-child {
-  text-align: right; /* Asegura que el texto del último span (total ahorro) esté a la derecha */
+  text-align: right
 }
 
 .result-detail {
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
