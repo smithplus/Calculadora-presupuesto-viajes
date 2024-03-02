@@ -63,3 +63,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     cambiarTipoAhorro(); // Para establecer el estado inicial correcto y calcular los presupuestos iniciales
 });
+
+////////
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const opcionesAhorro = document.querySelectorAll('.OpcionesAhorro input[type="radio"]');
+
+  opcionesAhorro.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      // Primero, quita la clase de todos los divs para resetear el estado visual
+      opcionesAhorro.forEach(function(radio) {
+        radio.closest('.OpcionesAhorro').classList.remove('OpcionesAhorroSeleccionado');
+      });
+
+      // Luego, añade la clase al div padre del radio seleccionado
+      if (radio.checked) {
+        radio.closest('.OpcionesAhorro').classList.add('OpcionesAhorroSeleccionado');
+      }
+    });
+  });
+});

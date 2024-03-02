@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f7f7f7;
   margin: 0;
   padding: 20px;
 }
@@ -75,9 +75,17 @@ input[type="number"] {
   margin-bottom: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
-  /* Asegura que el padding no afecte el ancho */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  -moz-appearance: textfield; /* Para Firefox */
 }
+
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 /* Estilos para los botones o controles interactivos, si existen */
 button {
@@ -183,7 +191,7 @@ input[type="number"] {
 /* ... tus otros estilos ... */
 
 .input-row {
-  margin-bottom: 42px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -217,7 +225,7 @@ input[type="number"] {
   .card {
       flex: none;
       /* Para que no se estiren en dispositivos móviles */
-      width: 100%;
+      
       /* Ocupa toda la anchura disponible */
       margin-bottom: 10px;
   }
@@ -233,4 +241,48 @@ input[type="number"] {
   align-items: flex-start;
   gap: 21px;
   align-self: stretch;
+}
+
+.icon-wrapper {
+  color: #4f55f0;
+  width: 20px;
+  height: 20px;
+  display: inline-flex; /* Cambiado a inline-flex para usar flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background-color: #eceeff; /* Color de fondo */
+  border-radius: 8px; /* Redondeo de esquinas */
+  padding: 5px; /* Espacio alrededor del icono */
+  margin-right: 8px;
+}
+
+
+.OpcionesAhorro {
+  display: flex; /* Establece el contenedor como un Flex container */
+  align-items: center; /* Centra los elementos hijos verticalmente */
+  cursor: pointer; /* Hace que el cursor cambie a mano al pasar sobre el área */
+  background: #f7f7f7;
+  padding: 20px;
+  margin: 20px 0; /* Ajustado para mantener el margen consistente */
+  border-radius: 8px;
+  border: 1px solid #E6E6E6;
+}
+
+.OpcionesAhorro label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.OpcionesAhorro input[type="radio"] {
+  margin-right: 10px; /* Asegura un poco de espacio entre el radio y el texto */
+}
+
+.OpcionesAhorroSeleccionado {
+  border: 1px solid #4f55f0; /* Nuevo color de borde */
+  background-color: #eceeff; /* Nuevo color de fondo */
+  color: #4f55f0; /* Nuevo color de texto */
 }
