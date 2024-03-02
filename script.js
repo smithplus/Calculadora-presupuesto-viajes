@@ -39,19 +39,58 @@ function calcularPresupuesto() {
         var montoOcio = totalAhorrado * 0.20;
         
         resultadosHTML += `
-            <div class="result-card">
-                <h3>${plan} (${duracion} meses de ahorro) | Total Ahorrado: $${totalAhorrado.toFixed(2)}</h3>
-                <ul>
-                    <li>Alojamiento (40%): $${montoAlojamiento.toFixed(2)}</li>
-                    <li>Transporte (40%): $${montoTransporte.toFixed(2)}</li>
-                    <li>Ocio (20%): $${montoOcio.toFixed(2)}</li>
-                </ul>
+    <div class="result-card">
+        <div class="result-header">
+            <label>${plan}</label>
+            <label>Total Ahorro: $${totalAhorrado.toFixed(2)}</label>
+        </div>
+        <div class="result-detail">
+            <span>Meses de ahorro: ${duracion}</span>
             </div>
-        `;
+        <div class="gasto-item">
+            <div class="gasto-info">
+                <span class="icon-wrapper"><i class="fa-solid fa-house"></i></span>
+                <span>Alojamiento</span>
+            </div>
+            <div class="monto-info">
+                <span class="monto">$${montoAlojamiento.toFixed(2)}</span>
+                <span class="porcentaje">40%</span>
+            </div>
+        </div>
+        <div class="gasto-item">
+            <div class="gasto-info">
+                <span class="icon-wrapper"><i class="fa-solid fa-bus"></i></span>
+                <span>Transporte</span>
+            </div>
+            <div class="monto-info">
+                <span class="monto">$${montoTransporte.toFixed(2)}</span>
+                <span class="porcentaje">40%</span>
+            </div>
+        </div>
+        <div class="gasto-item">
+            <div class="gasto-info">
+                <span class="icon-wrapper"><i class="fa-solid fa-face-smile"></i></span>
+                <span>Ocio</span>
+            </div>
+            <div class="monto-info">
+                <span class="monto">$${montoOcio.toFixed(2)}</span>
+                <span class="porcentaje">20%</span>
+            </div>
+        </div>
+    </div>
+`;
+
+
+
     }
 
     document.getElementById('resultados').innerHTML = resultadosHTML;
 }
+
+
+
+
+
 
 // Event listener para los campos de entrada y para inicializar la calculadora
 document.addEventListener('DOMContentLoaded', function() {

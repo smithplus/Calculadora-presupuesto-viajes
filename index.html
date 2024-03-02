@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calculadora de Presupuestos de Viaje</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculadora de Presupuestos de Viaje</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-<div class="container">
-  <h2>Calculadora de Presupuestos de Viaje</h2>
-  <div class="input-row">
-    <div class="card">
-      <label for="ingresoMensual">
-        <span class="icon-wrapper">
-          <i class="fa-solid fa-arrow-down"></i> <!-- Icono de FontAwesome -->
-        </span>
-        Ingreso Mensual
-      </label>
-      <input type="number" id="ingresoMensual" placeholder="Ingreso Mensual" oninput="calcularPresupuesto()">
-    </div>
-  </div>
-  <div class="input-row">
-    <div class="card">
-      <label for="porcentajeAhorro">
-        <span class="icon-wrapper">
-          <i class="fa-solid fa-percent"></i> <!-- Icono de FontAwesome -->
-        </span>
-        Porcentaje de Ahorro</label>
-      <input type="number" id="porcentajeAhorro" value="10" placeholder="Porcentaje de Ahorro" oninput="calcularPresupuesto()">
-    </div>
-  </div>
-  <div class="input-row">
-    <div class="card">
-      <label>
-          <span class="icon-wrapper">
-            <i class="fa-solid fa-piggy-bank"></i> <!-- Icono de FontAwesome -->
-          </span>
-          Opciones de Ahorro
-      </label>
-      <div class="OpcionesAhorro">
-          <input type="radio" id="customMonths" name="ahorroTipo" value="custom" checked onchange="cambiarTipoAhorro()">
-          <label for="customMonths">Meses Personalizados</label>
-      </div>
-      <div class="OpcionesAhorro">
-          <input type="radio" id="presetOptions" name="ahorroTipo" value="preset" onchange="cambiarTipoAhorro()">
-          <label for="presetOptions">Opciones Predefinidas</label>
-      </div>
-  </div>
-  
-    </div>
-  </div>
-  <div class="input-row" id="mesesAhorroInput">
-    <div class="card">
-      <label for="mesesAhorro">
-        <span class="icon-wrapper">
-          <i class="fa-regular fa-calendar"></i> <!-- Icono de FontAwesome -->
-        </span>
-        Messes de Ahorro</label>
-      <input type="number" id="mesesAhorro" placeholder="Meses de Ahorro" oninput="calcularPresupuesto()">
-    </div>
-  </div>
-  <div class="results-column" id="resultados">
-    <!-- Los resultados se mostrarán aquí -->
-  </div>
-</div>
+    </head>
+    <body>
 
-<script src="script.js"></script>
-</body>
+        <div class="container">
+            <h2>Calculadora de Presupuestos de Viaje</h2>
+            <div class="input-row">
+                <div class="card">
+                    <label for="ingresoMensual">
+                        <span class="icon-wrapper">
+                            <i class="fa-solid fa-arrow-down"></i>
+                            <!-- Icono de FontAwesome -->
+                        </span>
+                        Ingreso Mensual
+                    </label>
+                    <input type="number" id="ingresoMensual" placeholder="Ingreso Mensual" oninput="calcularPresupuesto()">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="card">
+                    <label for="porcentajeAhorro">
+                        <span class="icon-wrapper">
+                            <i class="fa-solid fa-percent"></i>
+                            <!-- Icono de FontAwesome -->
+                        </span>
+                        Porcentaje de Ahorro</label>
+                    <input type="number" id="porcentajeAhorro" value="10" placeholder="Porcentaje de Ahorro" oninput="calcularPresupuesto()">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="card">
+                    <label>
+                        <span class="icon-wrapper">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                            <!-- Icono de FontAwesome -->
+                        </span>
+                        Opciones de Ahorro
+                    </label>
+                    <div class="OpcionesAhorro">
+                        <input type="radio" id="customMonths" name="ahorroTipo" value="custom" checked onchange="cambiarTipoAhorro()">
+                        <label for="customMonths">Meses Personalizados</label>
+                    </div>
+                    <div class="OpcionesAhorro">
+                        <input type="radio" id="presetOptions" name="ahorroTipo" value="preset" onchange="cambiarTipoAhorro()">
+                        <label for="presetOptions">Opciones Predefinidas</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="input-row" id="mesesAhorroInput">
+                <div class="card">
+                    <label for="mesesAhorro">
+                        <span class="icon-wrapper">
+                            <i class="fa-regular fa-calendar"></i>
+                            <!-- Icono de FontAwesome -->
+                        </span>
+                        Messes de Ahorro</label>
+                    <input type="number" id="mesesAhorro" placeholder="Meses de Ahorro" oninput="calcularPresupuesto()">
+                </div>
+            </div>
+            <div
+                class="results-column" id="resultados"><!-- Los resultados se mostrarán aquí -->
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
 </html>

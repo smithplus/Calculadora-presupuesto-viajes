@@ -1,33 +1,26 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: #f7f7f7;
   margin: 0;
   padding: 20px;
+  /* Elimina el padding global para que el padding se maneje dentro de los contenedores específicos */
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  flex-direction: column; /* Cambia la dirección a columna para que sea consistente con el diseño móvil */
+  justify-content: center;
+  max-width: 424px; /* Establece el ancho máximo para desktop */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 20px; /* Mantiene el padding que ya tenías */
 }
 
 /* Columna de inputs */
-.inputs-column {
-  width: 50%; /* Cambiado al 50% para ocupar la mitad del ancho */
-  max-width: none; /* Elimina el límite máximo de ancho */
-  padding: 20px;
-  margin-right: 0; /* Elimina el margen derecho */
-  /* Espacio entre columnas */
-}
-
-/* Columna de resultados */
-.results-column {
-  width: 50%; /* Cambiado al 50% para ocupar la mitad del ancho */
-  max-width: none; /* Elimina el límite máximo de ancho */
-  border-radius: 8px;
-  padding: 20px;
+/* Asegúrate de que tus columnas de inputs y resultados se ajusten al nuevo diseño */
+.inputs-column, .results-column {
+  width: 100%; /* Ocupará el ancho completo del contenedor .container */
+  max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+  margin-right: 0; /* Asegura que no haya margen derecho innecesario */
 }
 
 .pre-results {
@@ -55,7 +48,7 @@ label {
   color: #000000;
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   padding-bottom: 12px;
 }
@@ -76,7 +69,6 @@ input[type="number"] {
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
-  -moz-appearance: textfield; /* Para Firefox */
 }
 
 /* Chrome, Safari, Edge */
@@ -127,11 +119,11 @@ button:hover {
   align-items: left;
   border-radius: 150px;
   border: 1px solid #E3E3E3;
-  background: #FFF;
+  background: #eceeff;
   font-weight: bold;
-  color: #404040;
+  color: #4f55f0;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
 }
 .aporte {
@@ -140,6 +132,14 @@ button:hover {
 
 .result-item {
   margin-top: 20px;
+}
+
+/* Media query para pantallas más anchas que 424px */
+@media (min-width: 424px) {
+  body {
+    /* Opcional: si deseas aumentar el padding en los lados en pantallas más grandes */
+    padding: 20px;
+  }
 }
 
 /* Ajustes responsivos para pantallas más pequeñas */
@@ -234,7 +234,7 @@ input[type="number"] {
 .result-card {
   border-radius: 16px;
   border: 1px solid #E6E6E6;
-  background: #EFF5FF;
+  background: #ffffff;
   padding: 20px;
   margin-bottom: 21px;
   flex-direction: column;
@@ -285,4 +285,51 @@ input[type="number"] {
   border: 1px solid #4f55f0; /* Nuevo color de borde */
   background-color: #eceeff; /* Nuevo color de fondo */
   color: #4f55f0; /* Nuevo color de texto */
+}
+
+.gasto-info {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.gasto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+}
+
+.emoji {
+  margin-right: 10px;
+}
+
+.porcentaje {
+  margin-left: 10px; /* Ajusta según necesites */
+}
+
+
+
+
+.result-header {
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center; /* Centra los elementos verticalmente */
+  width: 100%; /* Ocupa el ancho total del contenedor padre */
+}
+
+.result-header label:first-child {
+  text-align: left; /* Asegura que el texto del primer span (plan) esté a la izquierda */
+}
+
+.result-header label:last-child {
+  text-align: right; /* Asegura que el texto del último span (total ahorro) esté a la derecha */
+}
+
+.result-detail {
+  margin-bottom: 20px;
 }
