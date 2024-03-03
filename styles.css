@@ -1,7 +1,8 @@
 body {
-  font-family: "Quicksand",sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: white;
-  background-color: #181534;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(356deg, rgba(0, 0, 0, 1) 0%, rgba(24, 21, 52, 1) 100%);
   margin: 0;
   padding: 20px
 }
@@ -19,17 +20,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 20px;
+  /* Ajusta el margen superior según sea necesario */
 }
 
 .logo-container img {
-  max-width: 250px; /* Establece el ancho máximo del logo */
-  width: 100%; /* Hace que el logo sea responsive y no exceda su contenedor */
-  height: auto; /* Mantiene la proporción del logo al ajustar el ancho */
+  max-width: 250px;
+  /* Establece el ancho máximo del logo */
+  width: 100%;
+  /* Hace que el logo sea responsive y no exceda su contenedor */
+  height: auto;
+  /* Mantiene la proporción del logo al ajustar el ancho */
 }
 
 
-.inputs-column,.results-column {
+.inputs-column,
+.results-column {
   width: 100%;
   max-width: 100%;
   margin-right: 0
@@ -47,7 +53,8 @@ body {
   background: #1F1A4B;
 }
 
-h2,label {
+h2,
+label {
   color: white;
   font-size: 24px;
   font-style: normal;
@@ -77,10 +84,12 @@ input[type=number] {
 
 ::placeholder {
   color: rgba(255, 255, 255, 0.322);
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0
 }
@@ -104,7 +113,7 @@ button:hover {
 .resultado {
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
   padding: 20px;
   margin-bottom: 20px;
   color: #333
@@ -114,7 +123,8 @@ button:hover {
   margin-right: 5px
 }
 
-.monto,.porcentaje {
+.monto,
+.porcentaje {
   padding: 8px 12px;
   align-items: left;
   border-radius: 150px;
@@ -133,22 +143,23 @@ button:hover {
   margin-top: 20px
 }
 
-@media (min-width:424px) {
+@media(min-width:424px) {
   body {
-      padding: 20px
+    padding: 20px
   }
 }
 
-@media (max-width:768px) {
+@media(max-width:768px) {
   .container {
-      flex-direction: column;
-      padding: 0
+    flex-direction: column;
+    padding: 0
   }
 
-  .inputs-column,.results-column {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px
+  .inputs-column,
+  .results-column {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px
   }
 }
 
@@ -193,14 +204,14 @@ button:hover {
   font-size: 28px;
 }
 
-@media (max-width:768px) {
+@media(max-width:768px) {
   .input-row {
-      flex-direction: column
+    flex-direction: column
   }
 
   .card {
-      flex: none;
-      margin-bottom: 10px
+    flex: none;
+    margin-bottom: 10px
   }
 }
 
@@ -208,7 +219,7 @@ button:hover {
   border-radius: 21px;
   border: 1px solid hsl(0, 0%, 12%);
   background: #1F1A4B;
-    padding: 20px;
+  padding: 20px;
   margin-bottom: 21px;
   flex-direction: column;
   align-items: flex-start;
@@ -216,7 +227,8 @@ button:hover {
   align-self: stretch
 }
 
-.OpcionesAhorro,.icon-wrapper {
+.OpcionesAhorro,
+.icon-wrapper {
   align-items: center;
   border-radius: 8px
 }
@@ -257,7 +269,9 @@ button:hover {
   color: #4f55f0;
 }
 
-.OpcionesAhorro label,.gasto-info,.gasto-item {
+.OpcionesAhorro label,
+.gasto-info,
+.gasto-item {
   display: flex;
   align-items: center
 }

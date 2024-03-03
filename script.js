@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Event listener para campos de entrada y para inicializar la calculadora
     document.getElementById('ingresoMensual').addEventListener('input', actualizarCalculos);
     document.getElementById('porcentajeAhorro').addEventListener('input', actualizarCalculos);
@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener para opciones de ahorro
     const opcionesAhorro = document.querySelectorAll('.OpcionesAhorro input[type="radio"]');
-    opcionesAhorro.forEach(function(radio) {
-        radio.addEventListener('change', function() {
+    opcionesAhorro.forEach(function (radio) {
+        radio.addEventListener('change', function () {
             // Remover la clase de todas las opciones de ahorro para restablecer el estado visual
-            opcionesAhorro.forEach(function(radio) {
+            opcionesAhorro.forEach(function (radio) {
                 radio.closest('.OpcionesAhorro').classList.remove('OpcionesAhorroSeleccionado');
             });
 
@@ -55,7 +55,7 @@ function calcularPresupuesto() {
         var duracion = planesViaje[plan];
         var totalAhorrado = calcularTotalAhorrado(ingresoMensual, porcentajeAhorro, duracion);
         var { montoAlojamiento, montoTransporte, montoOcio } = calcularMontos(totalAhorrado);
-        
+
         resultadosHTML += `
         <div class="result-card">
             <div class="result-header">
@@ -103,8 +103,8 @@ function calcularPresupuesto() {
 
 // Función para obtener los planes de viaje según el tipo de ahorro seleccionado
 function obtenerPlanesViaje(tipoAhorro, mesesAhorro) {
-    return tipoAhorro === 'custom' ? {"Meses Personalizados": mesesAhorro} :
-        {"Escapada": 1, "Viaje Simple": 2, "Viaje Regular": 3, "Viaje Largo": 4, "Vacaciones": 5};
+    return tipoAhorro === 'custom' ? { "Meses Personalizados": mesesAhorro } :
+        { "Escapada": 1, "Viaje Simple": 2, "Viaje Regular": 3, "Viaje Largo": 4, "Vacaciones": 5 };
 }
 
 // Función para calcular el total ahorrado
@@ -118,5 +118,5 @@ function calcularMontos(totalAhorrado) {
     var montoAlojamiento = totalAhorrado * 0.40;
     var montoTransporte = totalAhorrado * 0.40;
     var montoOcio = totalAhorrado * 0.20;
-    return {montoAlojamiento, montoTransporte, montoOcio};
+    return { montoAlojamiento, montoTransporte, montoOcio };
 }
