@@ -1,6 +1,7 @@
 body {
   font-family: "Quicksand",sans-serif;
-  background-color: #f7f7f7;
+  color: white;
+  background-color: #181534;
   margin: 0;
   padding: 20px
 }
@@ -13,6 +14,20 @@ body {
   margin: 0 auto;
   padding: 20px
 }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.logo-container img {
+  max-width: 250px; /* Establece el ancho máximo del logo */
+  width: 100%; /* Hace que el logo sea responsive y no exceda su contenedor */
+  height: auto; /* Mantiene la proporción del logo al ajustar el ancho */
+}
+
 
 .inputs-column,.results-column {
   width: 100%;
@@ -29,11 +44,11 @@ body {
   flex: 1 0 0;
   border-radius: 16px;
   border: 1px solid #e6e6e6;
-  background: #fff
+  background: #1F1A4B;
 }
 
 h2,label {
-  color: #000;
+  color: white;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -49,14 +64,20 @@ label {
 }
 
 input[type=number] {
+  color: white;
   width: 100%;
   margin-bottom: 10px;
   width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ccc;
-  background: #f6f6f6;
+  background: #2C2760;
   border-radius: 8px;
   box-sizing: border-box
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.322);
+  opacity: 1; /* Firefox */
 }
 
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
@@ -69,7 +90,7 @@ button {
   border: 0;
   border-radius: 4px;
   background-color: #007bff;
-  color: #fff;
+  color: #1F1A4B;
   cursor: pointer;
   display: block;
   width: 100%;
@@ -97,9 +118,8 @@ button:hover {
   padding: 8px 12px;
   align-items: left;
   border-radius: 150px;
-  border: 1px solid #e3e3e3;
-  background: #eceeff;
-  color: #4f55f0;
+  background: #2C2760;
+  color: white;
   font-size: 16px;
   font-weight: 700;
   line-height: normal
@@ -156,19 +176,21 @@ button:hover {
 
 .card {
   flex: 1;
-  border-radius: 16px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
+  border-radius: 21px;
+  border: 1px solid hsl(0, 0%, 12%);
+  background: #1F1A4B;
   padding: 20px
 }
 
 .card input[type=number] {
   width: calc(100%);
   padding: 10px;
-  border: 1px solid #ccc;
-  background: #f6f6f6;
+  border: 1px solid #2C2760;
+  background: #2C2760;
   border-radius: 8px;
-  box-sizing: border-box
+  box-sizing: border-box;
+  height: 52px;
+  font-size: 28px;
 }
 
 @media (max-width:768px) {
@@ -183,10 +205,10 @@ button:hover {
 }
 
 .result-card {
-  border-radius: 16px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
-  padding: 20px;
+  border-radius: 21px;
+  border: 1px solid hsl(0, 0%, 12%);
+  background: #1F1A4B;
+    padding: 20px;
   margin-bottom: 21px;
   flex-direction: column;
   align-items: flex-start;
@@ -200,12 +222,12 @@ button:hover {
 }
 
 .icon-wrapper {
-  color: #4f55f0;
+  color: #fff;
   width: 20px;
   height: 20px;
   display: inline-flex;
   justify-content: center;
-  background-color: #eceeff;
+  background-color: #4531FF;
   padding: 5px;
   margin-right: 8px
 }
@@ -213,10 +235,9 @@ button:hover {
 .OpcionesAhorro {
   display: flex;
   cursor: pointer;
-  background: #f7f7f7;
+  background: #2C2760;
   padding: 20px;
   margin: 20px 0;
-  border: 1px solid #e6e6e6
 }
 
 .OpcionesAhorro label {
@@ -227,13 +248,13 @@ button:hover {
 }
 
 .OpcionesAhorro input[type=radio] {
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 .OpcionesAhorroSeleccionado {
-  border: 1px solid #4f55f0;
-  background-color: #eceeff;
-  color: #4f55f0
+  border: 1px solid #4B38FF;
+  background-color: #4f55f0;
+  color: #4f55f0;
 }
 
 .OpcionesAhorro label,.gasto-info,.gasto-item {
@@ -248,10 +269,9 @@ button:hover {
 .gasto-item {
   justify-content: space-between;
   margin-bottom: 10px;
-  background: #fff;
+  background: #2C2760;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #e3e3e3
 }
 
 .emoji {
